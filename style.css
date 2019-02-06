@@ -1,0 +1,97 @@
+﻿body {
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+}
+/*CONTAINERS*/
+main div#home.jumbotron.jumbotron-fluid.text-center.mb-0{
+    padding:60px 50px;
+}
+article#news div.container-fluid.text-center, article#articles {
+    padding: 96px 25px;
+}
+@media screen and (max-width:2560px) and (min-width:576px) {
+    article#news div.container-fluid.text-center, article#articles {
+        padding: 96px;
+    }
+}
+
+.bg-grey{
+    background-color:#fafafa;
+}
+/*/CONTAINERS*/
+/*HOME*/
+main div#home.jumbotron.jumbotron-fluid.text-center.mb-0 {
+    color: #fff;
+    background-image: url(../assets/images/mainBg.png);
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main #home h1{
+    font-size:2.25rem;
+    font-weight:600;
+}
+main #home h2{
+    font-size:18px;
+    font-weight:400;
+}
+main #home a.btn.btn {
+    color: #fff;
+    border:1.5px solid #fff;
+    font-weight:500;
+}
+/*/HOME*/
+/*FEATURED PRODUCTS*/
+article div.container.text-center{
+    color:#828286;
+    padding:90px 25px;
+}
+article div.container.text-center header h3{
+    font-size:32px;
+    font-weight:600;
+}
+article div.container.text-center header h4{
+    font-size:16px;
+    font-weight:400;
+}
+/*/FEATURED PRODUCTS*/
+/*NEWS*/
+article#news div.container-fluid.text-center {
+    background-color: #fafafa;
+    color: #828286;
+}
+article#news div.container-fluid.text-center header h3{
+    font-size:32px;
+    font-weight:600;
+}
+#news span.text-white {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width:2560px) and (min-width:576px) {
+    #news span.text-white {
+        text-align: left;
+        font-size: 36px;
+        font-weight: 500;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+/*/NEWS*/
+/*ARTICLES*/
+article#articles{
+    color:#828286;
+}
+article#articles header h3.text-center, #articles div.container div.row.mb-5 div.col-md-8 h4{
+    font-size: 32px;
+    font-weight: 600;
+}
+/*/ARTICLES*/
