@@ -2,14 +2,17 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lorem ipsum dolor sit amet | Lorem Ipsum</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+    <link href="css/style.css" rel="stylesheet" />
 </head>
-    <body>
+    <body id="top">
         <!--ALERT-->
         <div class="alert text-white bg-dark alert-dismissible fade show text-center mb-0">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -17,7 +20,7 @@
         </div>
         <!--/ALERT-->
         <!--NAVBAR-->
-        <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center">
+        <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-center sticky-top">
             <a href="/" class="navbar-brand mr-0">Lorem</a>
             <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
                 <span class="navbar-toggler-icon"></span>
@@ -25,15 +28,15 @@
             <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
                 <ul class="navbar-nav mx-auto text-center">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="#top">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Featured</a>
+                        <a class="nav-link" href="#ftProd">Featured</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
+                        <a class="nav-link" href="#news">News</a>
                     </li><li class="nav-item">
-                        <a class="nav-link" href="#">Articles</a>
+                        <a class="nav-link" href="#articles">Articles</a>
                     </li>
                 </ul>
                 <div class="nav navbar-nav flex-row justify-content-center flex-nowrap">
@@ -44,73 +47,93 @@
         <!--/NAVBAR-->
         <!--HOME-->
         <main>
-            <div class="jumbotron jumbotron-fluid text-center mb-0" id="home" style="background-color:#506d2f">
-                <h1>
-                    Lorem ipsum
-                    dolor
-                    sit.
-                </h1>
-                <h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Aenean in euismod risus. Aenean ut consequat odio.
-                    Pellentesque iaculis ipsum et.
-                </h2>
-                <a class="btn btn font-weight-bold" role="button" href="#home">LOREM IPSUM</a>
+            <div class="jumbotron jumbotron-fluid text-center mb-0" id="home">
+                <header class="justify-content-center">
+                    <h1>
+                        Lorem ipsum
+                        dolor
+                        sit.
+                    </h1>
+                    <h2 class="mb-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing <br>
+                        elit. Aenean in euismod risus. Aenean ut consequat odio.<br>
+                        Pellentesque iaculis ipsum et.
+                    </h2>
+                </header>
+                <a class="btn btn-sm mb-3" role="button" href="#home">Lorem Ipsum</a>
                 <br>
-                <a class="btn btn font-weight-bold" role="button" href="#home">LOREM IPSUM</a>
+                <a class="btn btn-sm" role="button" href="#home">Lorem Ipsum</a>
             </div>
         </main>
         <!--/HOME-->
         <!--FEATURED PRODUCTS-->
-        <article>
-            <div class="container text-center" style="background-color:#2a2922">
+        <article id="ftProd">
+            <div class="container text-center">
                 <header>
                     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing.</h3>
-                    <h4>
+                    <h4 class="mb-5">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed volutpat elit lacus, 
                         vitae pharetra tortor.
                     </h4>
                 </header>
                 <div class="row">
-                    <div class="col-lg-4" style="background-color:#f3ebdd;">
-                        Lorem ipsum dolor
+                    <div class="col-lg-4">
+                        <a href="#" class="text-decoration-none">
+                            <img src="assets/images/featprod1.png" alt="Bottle" class="mx-auto d-block img-fluid mb-2" />
+                            <span class="d-block">Surge Acute Nootropic</span>
+                            <span class="text-secondary text">$20</span>
+                        </a>
                     </div>
-                    <div class="col-lg-4" style="background-color:#7d5642;">
-                        Lorem ipsum dolor
+                    <div class="col-lg-4">
+                        <a href="#" class="text-decoration-none">
+                            <img src="assets/images/featprod2.png" alt="Bottle" class="mx-auto d-block img-fluid mb-2" />
+                            <span class="d-block">Vitality Geroprotector</span>
+                            <span class="text-secondary">$40</span>
+                        </a>
                     </div>
-                    <div class="col-lg-4" style="background-color:#506d2f;">
-                        Lorem ipsum dolor
+                    <div class="col-lg-4">
+                        <a href="#" class="text-decoration-none">
+                            <img src="assets/images/featprod3.png" alt="Bottle" class="mx-auto d-block img-fluid mb-2" />
+                            <span class="d-block">Clarity Daily Nootropic</span>
+                            <span class="text-secondary">$32</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </article>
         <!--/FEATURED PRODUCTS-->
         <!--NEWS-->
-        <article>
-            <div class="container-fluid text-center" style="background-color:#f3ebdd">
+        <article id="news">
+            <div class="container-fluid text-center">
                 <header>
-                    <h3>Lorem ipsum dolor sit amet</h3>
+                    <h3 class="mb-5">Lorem ipsum dolor sit amet</h3>
                 </header>
                 <div class="row">
-                    <div class="col-lg-6" style="background-color:#7d5642;">
-                        Lorem ipsum dolor.
+                    <div class="col-lg-6 pr-lg-1">
+                        <a href="#">
+                            <img src="assets/images/news1.png" alt="Bottle" class="mx-auto d-block img-fluid" />
+                            <span class="text-white text-nowrap">Lorem ipsum dolor</span>
+                        </a>
                     </div>
-                    <div class="col-lg-6" style="background-color:#506d2f;">
-                        Lorem ipsum dolor.
+                    <div class="col-lg-6 pl-lg-1">
+                        <a href="#">
+                            <img src="assets/images/news2.png" alt="Bottle" class="mx-auto d-block img-fluid" />
+                            <span class="text-white text-nowrap">Lorem ipsum dolor</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </article>
         <!--/NEWS-->
         <!--ARTICLES-->
-        <article>
+        <article id="articles">
             <header>
-                <h3 class="text-center">Lorem ipsum dolor sit amet</h3>
+                <h3 class="text-center mb-5">Lorem ipsum dolor sit amet</h3>
             </header>
-            <div class="container" style="background-color:#7d5642;">
-                <div class="row">
+            <div class="container">
+                <div class="row mb-5">
                     <div class="col-md-4">
-                        X
+                        <img src="assets/images/article1.png" alt="Bottle" class="mx-auto d-block img-fluid" />
                     </div>
                     <div class="col-md-8">
                         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra est</h4>
@@ -120,9 +143,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-md-4">
-                        X
+                        <img src="assets/images/article2.png" alt="Bottle" class="mx-auto d-block img-fluid" />
                     </div>
                     <div class="col-md-8">
                         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra est</h4>
@@ -132,9 +155,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-md-4">
-                        X
+                        <img src="assets/images/article3.png" alt="Bottle" class="mx-auto d-block img-fluid" />
                     </div>
                     <div class="col-md-8">
                         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra est</h4>
@@ -144,9 +167,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-md-4">
-                        X
+                        <img src="assets/images/article4.png" alt="Bottle" class="mx-auto d-block img-fluid" />
                     </div>
                     <div class="col-md-8">
                         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra est</h4>
@@ -156,9 +179,9 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-5">
                     <div class="col-md-4">
-                        X
+                        <img src="assets/images/article5.png" alt="Bottle" class="mx-auto d-block img-fluid" />
                     </div>
                     <div class="col-md-8">
                         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra est</h4>
