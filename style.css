@@ -1,24 +1,51 @@
-﻿body {
+﻿html{
+    scroll-behavior:smooth;
+}
+body {
     font-family: 'Karla', Arial, Helvetica, sans-serif;
 }
 /*CONTAINERS*/
 main div#home.jumbotron.jumbotron-fluid.text-center.mb-0{
     padding:60px 50px;
 }
-article#news div.container-fluid.text-center, article#articles {
+article#news div.container-fluid.text-center, article#articles, section#sub div.container-fluid.text-center, #links div.container-fluid {
     padding: 96px 25px;
 }
 @media screen and (max-width:2560px) and (min-width:576px) {
-    article#news div.container-fluid.text-center, article#articles {
+    article#news div.container-fluid.text-center, article#articles, #links div.container-fluid {
         padding: 96px;
     }
 }
+article div.container.text-center {
+    padding: 90px 25px;
+}
+footer div.container-fluid {
+    padding: 0 25px;
+}
 
+@media screen and (max-width:2560px) and (min-width:576px) {
+    footer div.container-fluid {
+        padding: 0 72px;
+    }
+}
 .bg-grey{
     background-color:#fafafa;
 }
 /*/CONTAINERS*/
+/*NAVBAR*/
+nav {
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.15);
+}
+nav a.navbar-brand.mr-0 h4 {
+    color: #828286;
+    font-weight: 700;
+    margin-bottom: 0 !important;
+}
+/*/NAVBAR*/
 /*HOME*/
+main {
+    overflow: hidden;
+}
 main div#home.jumbotron.jumbotron-fluid.text-center.mb-0 {
     color: #fff;
     background-image: url(../assets/images/mainBg.png);
@@ -27,10 +54,48 @@ main div#home.jumbotron.jumbotron-fluid.text-center.mb-0 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: zoomin 1.5s;
+    transition: all .5s ease-in-out;
+    overflow:hidden;
 }
-main #home h1{
-    font-size:2.25rem;
-    font-weight:600;
+/* Zoom in Keyframes */
+@keyframes zoomin {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/*End of Zoom in Keyframes */
+.slideanim {
+    visibility: hidden;
+}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    visibility: visible;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+main #home h1 {
+    font-size: 2.25rem;
+    font-weight: 600;
 }
 main #home h2{
     font-size:18px;
@@ -41,11 +106,13 @@ main #home a.btn.btn {
     border:1.5px solid #fff;
     font-weight:500;
 }
+main #home a.btn.btn:hover{
+    border:1.5px solid #007bff;
+}
 /*/HOME*/
 /*FEATURED PRODUCTS*/
 article div.container.text-center{
     color:#828286;
-    padding:90px 25px;
 }
 article div.container.text-center header h3{
     font-size:32px;
@@ -62,8 +129,13 @@ article#news div.container-fluid.text-center {
     color: #828286;
 }
 article#news div.container-fluid.text-center header h3{
-    font-size:32px;
+    font-size:2rem;
     font-weight:600;
+}
+@media screen and (max-width:792px) and (min-width:320px) {
+    #news div div div.col-lg-6 {
+        margin-top:4px;
+    }
 }
 #news span.text-white {
     text-align: left;
@@ -74,10 +146,21 @@ article#news div.container-fluid.text-center header h3{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-@media screen and (max-width:2560px) and (min-width:576px) {
+@media screen and (max-width:2560px) and (min-width:919px) {
     #news span.text-white {
         text-align: left;
         font-size: 36px;
+        font-weight: 500;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media screen and (max-width:918px) and (min-width:772px) {
+    #news span.text-white {
+        text-align: left;
+        font-size: 2rem;
         font-weight: 500;
         position: absolute;
         bottom: 0;
@@ -94,4 +177,66 @@ article#articles header h3.text-center, #articles div.container div.row.mb-5 div
     font-size: 32px;
     font-weight: 600;
 }
+#articles div div div a.btn.btn-outline-primary.btn-sm.mb-3 {
+    border: 1.5px solid #007bff;
+    font-weight: 500;
+}
 /*/ARTICLES*/
+/*SUBSCRIPTION*/
+section#sub div.container-fluid.text-center {
+    color:#fff;
+    background-image: url(../assets/images/mainBg.png);
+    height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section#sub div.container-fluid.text-center header h3{
+    font-size:32px;
+    font-weight:600;
+}
+section#sub div.container-fluid.text-center header h4{
+    font-size:16px;
+    font-weight:400;
+}
+@media screen and (max-width:2560px) and (min-width:576px) {
+    .input-group {
+        width: 28rem!important;
+    }
+}
+/*/SUBSCRIPTION*/
+/*LINKS*/
+#links {
+    background-color: #494949;
+}
+#links div.container-fluid{
+    color:#fff;
+}
+#links div section div.row div.col-md-4 h4{
+    font-weight:700;
+}
+@media screen and (max-width:759px) and (min-width:368px) {
+    #links div section div.row div.col-md-1{
+        width:5em;
+    }
+}
+/*/LINKS*/
+/*FOOTER*/
+footer div.container-fluid{
+    background-color:#333;
+}
+footer div.container-fluid div.row {
+    height: 117px;
+    padding: 16px 0;
+}
+footer div div div i.fa {
+    font-size: 20px;
+}
+@media screen and (max-width:2560px) and (min-width:992px) {
+    footer div.container-fluid div.row {
+        height: 52px;
+        padding: 16px 0;
+    }
+}
+/*/FOOTER*/
