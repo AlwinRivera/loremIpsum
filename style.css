@@ -122,6 +122,36 @@ article div.container.text-center header h4{
     font-size:16px;
     font-weight:400;
 }
+.image{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+article#ftProd div.col-sm-4.col-md-4.col-lg-4:hover .image {
+    opacity: 0.3;
+}
+article#ftProd div.col-sm-4.col-md-4.col-lg-4:hover .middle {
+    opacity: 1;
+}
+.text {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 6px 12px
+}
 /*/FEATURED PRODUCTS*/
 /*NEWS*/
 article#news div.container-fluid.text-center {
@@ -168,18 +198,47 @@ article#news div.container-fluid.text-center header h3{
         transform: translate(-50%, -50%);
     }
 }
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: #fff;
+}
+article#news div.col-sm-6.col-md-6.col-lg-6:hover .overlay{
+    opacity: 0.8;
+}
+.fa-plus-circle {
+    color: #b3b3b3;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.fa-plus-circle:hover{
+    color: #999;
+}
 /*/NEWS*/
 /*ARTICLES*/
 article#articles{
-    color:#828286;
+    color:#828286!important;
 }
 article#articles header h3.text-center, #articles div.container div.row.mb-5 div.col-md-8 h4{
     font-size: 32px;
     font-weight: 600;
 }
-#articles div div div a.btn.btn-outline-primary.btn-sm.mb-3 {
+#articles div div div a.btn.btn-outline-primary.btn-md.mb-3 {
     border: 1.5px solid #007bff;
     font-weight: 500;
+    width:8.3em!important;
 }
 /*/ARTICLES*/
 /*SUBSCRIPTION*/
@@ -215,6 +274,9 @@ section#sub div.container-fluid.text-center header h4{
 }
 #links div section div.row div.col-md-4 h4{
     font-weight:700;
+}
+section#links div section div div ul li a:hover {
+    color: #448aff !important;
 }
 @media screen and (max-width:759px) and (min-width:368px) {
     #links div section div.row div.col-md-1{
